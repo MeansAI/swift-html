@@ -1,11 +1,16 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
     name: "swift-html",
     platforms: [
-       .macOS(.v10_15)
-    ],
+		.macOS(.v10_15),
+		.iOS(.v13),
+		.tvOS(.v13),
+		.watchOS(.v6),
+		.macCatalyst(.v13),
+        .visionOS(.v1)
+	],
     products: [
         .library(name: "SwiftSgml", targets: ["SwiftSgml"]),
         .library(name: "SwiftHtml", targets: ["SwiftHtml"]),
